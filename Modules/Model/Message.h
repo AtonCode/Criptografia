@@ -11,8 +11,10 @@ class Message
     public:
         Message();
         ~Message();
+        void setMessage(char* message);
+        void setPublicKey(char* public_Key);
         void encrypt();
-
+        void decrypt();
 };
 
 

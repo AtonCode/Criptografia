@@ -1,0 +1,13 @@
+# gitignore for a c++ project
+
+# C++
+main
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.exe
+*.so
+*.dylib
+

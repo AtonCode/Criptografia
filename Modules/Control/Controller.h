@@ -11,8 +11,8 @@ class Controller
     public:
         Controller();
         ~Controller();
-        
-
+        void printEncryptedMessage();
+        void printDecryptedMessage();
 };
 
 
