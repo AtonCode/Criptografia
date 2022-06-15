@@ -2,17 +2,25 @@
 #define CONTROLLER_H
 
 #include "../Model/Message.h"
+#include "../Model/Agent.h"
+#include <string>
+#include <list>
 
 class Controller
 {
     private:
-        Message* message;
+        std::list<Agent> agents;
 
     public:
         Controller();
         ~Controller();
-        void printEncryptedMessage();
-        void printDecryptedMessage();
+        void sendMessage(Message message);
+        void makeAgent(std::string name, std::string public_Key, std::string password);
+        void loginAgentByPublicKey(std::string public_Key);
+
+        void update();
+        void errase_all();
+
 };
 
 

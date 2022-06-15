@@ -1,20 +1,32 @@
 #ifndef MESSAGE_H
 #define MESSAGE_H
 
+#include <string>
+
 class Message
 {
     private:
-        char* message;
-        char* public_Key;
-        int length;
+        std::string  message;
+        std::string  public_Key_Sender;
+        std::string  public_Key_Receiver;
+        
 
     public:
         Message();
         ~Message();
-        void setMessage(char* message);
-        void setPublicKey(char* public_Key);
+
+        void setMessage(std::string  message);
+        std::string getMessage();
+
+        void setPublicKeySender(std::string public_Key);
+        std::string getPublicKeySender();
+        
+        void setPublicKeyReceiver(std::string public_Key);
+        std::string getPublicKeyReceiver();
+
         void encrypt();
-        void decrypt();
+    
+        
 };
 
 
